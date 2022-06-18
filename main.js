@@ -119,7 +119,7 @@ time_list.sort()
 if (get_octave_count() < 5) throw new Error('5옥타브 이상으로 설정해야 연주할 수 있습니다.')
 
 var time = 0
-bpm = bpm + bpm * 0.05 // bpm 수치 5% 보정(원곡보다 살짝 느린 현상이 발생)
+bpm = bpm * 1.05 // bpm 수치 5% 보정(원곡보다 살짝 느린 현상이 발생)
 time2 = Date.now()
 speed_text = ``
 speed_time = Date.now()
