@@ -39,21 +39,6 @@ function get_octave_count() {
     return Number(document.querySelector("#piano > piano-keyboard").shadowRoot.querySelector("#container").className.slice(-1))
 }
 
-function add_note_list(a,b) {
-    if (a.length >= b.length) { // a = [1,2,3] | b = [4,5] -> [14,25,3]
-        for (let index = 0; index < b.length; index++) {
-            a[index] += b[index];
-        }
-        return a
-    }
-    else { // a = [1,2] | b = [3,4,5] -> [14,25,3]
-        for (let index = 0; index < a.length; index++) {
-            b[index] += a[index];
-        }
-        return b
-    }
-}
-
 // 기본 악보 처리 설정
 var white_notes = ["C","D","E","F","G","A","B"]
 var white_octaves = [1,2,3,4,5,6,7]
